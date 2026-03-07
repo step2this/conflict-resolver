@@ -6,3 +6,4 @@ __pycache__/
 .uv/
 *.session
 *.session-journal
+data/pipeline.log
