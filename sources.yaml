@@ -24,6 +24,31 @@ rss:
     bias: pro-palestinian
     type: journalist
 
+  - name: Al Jazeera
+    url: https://www.aljazeera.com/xml/rss/all.xml
+    bias: pro-palestinian
+    type: journalist
+
+  - name: BBC Middle East
+    url: https://feeds.bbci.co.uk/news/world/middle_east/rss.xml
+    bias: pro-western
+    type: journalist
+
+  - name: AP News (via Google News)
+    url: https://news.google.com/rss/search?q=site:apnews.com+iran+OR+israel+OR+middle+east&hl=en-US&gl=US&ceid=US:en
+    bias: pro-western
+    type: wire-service
+
+  - name: Reuters (via Google News)
+    url: https://news.google.com/rss/search?q=site:reuters.com+iran+OR+israel+OR+middle+east&hl=en-US&gl=US&ceid=US:en
+    bias: pro-western
+    type: wire-service
+
+  - name: Haaretz (via Google News)
+    url: https://news.google.com/rss/search?q=site:haaretz.com+iran+OR+israel+OR+strikes&hl=en-US&gl=US&ceid=US:en
+    bias: pro-israel
+    type: journalist
+
 telegram:
   - name: OSINTdefender
     channel: sentdefender
