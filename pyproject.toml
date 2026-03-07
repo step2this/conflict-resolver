@@ -12,4 +12,5 @@ dependencies = [
     "pyyaml",
     "mkdocs-material",
     "telethon",
+    "python-dotenv",
 ]
