@@ -1,0 +1,19 @@
+site_name: Conflict Digest
+site_description: Daily structured digest of conflict damage claims from primary sources
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep orange
+  features:
+    - search.suggest
+    - navigation.instant
+
+plugins:
+  - search
+  - blog
+
+markdown_extensions:
+  - tables
+  - admonition

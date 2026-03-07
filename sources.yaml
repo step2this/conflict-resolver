@@ -1,0 +1,57 @@
+rss:
+  - name: OCHA Situation Reports
+    url: https://www.unocha.org/rss.xml
+    bias: neutral
+    type: institutional
+
+  - name: Middle East Eye
+    url: https://www.middleeasteye.net/rss
+    bias: pro-palestinian
+    type: journalist
+
+  - name: The Cradle
+    url: https://thecradle.co/feed
+    bias: anti-imperialist
+    type: journalist
+
+  - name: Airwars (via Google News)
+    url: https://news.google.com/rss/search?q=site:airwars.org&hl=en-US&gl=US&ceid=US:en
+    bias: neutral
+    type: investigative
+
+  - name: MEMO (via Google News)
+    url: https://news.google.com/rss/search?q=site:middleeastmonitor.com&hl=en-US&gl=US&ceid=US:en
+    bias: pro-palestinian
+    type: journalist
+
+telegram:
+  - name: OSINTdefender
+    channel: sentdefender
+    bias: aggregator
+    type: osint
+
+  - name: IDF Official
+    channel: idf
+    bias: pro-israel
+    type: primary-actor
+
+  - name: WarMonitor
+    channel: war_monitor
+    bias: aggregator
+    type: osint
+
+  - name: Islamic Resistance Iraq
+    channel: islamic_resistance_in_iraq
+    bias: pro-resistance
+    type: primary-actor
+
+  - name: Ansarallah (Houthi)
+    channel: ansarallah_en
+    bias: pro-resistance
+    type: primary-actor
+
+api:
+  - name: Tech for Palestine
+    url: https://data.techforpalestine.org/api/v3/summary.json
+    bias: neutral
+    type: structured-data

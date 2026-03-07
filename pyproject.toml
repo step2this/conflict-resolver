@@ -1,0 +1,15 @@
+[project]
+name = "conflict-digest"
+version = "0.1.0"
+description = "Daily structured digest of conflict damage claims from primary sources"
+requires-python = ">=3.12"
+dependencies = [
+    "feedparser",
+    "httpx",
+    "beautifulsoup4",
+    "tinydb",
+    "anthropic",
+    "pyyaml",
+    "mkdocs-material",
+    "telethon",
+]

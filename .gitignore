@@ -1,0 +1,8 @@
+.env
+site/
+data/items.json
+__pycache__/
+*.pyc
+.uv/
+*.session
+*.session-journal
