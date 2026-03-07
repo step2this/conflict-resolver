@@ -77,3 +77,28 @@ def sync_to_s3(bucket: str = "conflict-digest") -> bool:
     except Exception as e:
         logger.error(f"S3 sync error: {e}")
         return False
+
+
+CLOUDFRONT_DISTRIBUTION_ID = "EWSOAT81HHIG9"
+
+
+def invalidate_cloudfront(distribution_id: str = CLOUDFRONT_DISTRIBUTION_ID) -> bool:
+    """Invalidate CloudFront cache so new content is served immediately."""
+    try:
+        result = subprocess.run(
+            [
+                "aws", "cloudfront", "create-invalidation",
+                "--distribution-id", distribution_id,
+                "--paths", "/*",
+            ],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            logger.error(f"CloudFront invalidation failed: {result.stderr}")
+            return False
+        logger.info(f"CloudFront invalidation created for {distribution_id}")
+        return True
+    except Exception as e:
+        logger.error(f"CloudFront invalidation error: {e}")
+        return False

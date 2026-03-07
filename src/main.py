@@ -21,7 +21,7 @@ from src.collect import (
 )
 from src.dedupe import dedupe_and_store, get_db, get_recent_items
 from src.analyse import analyse
-from src.publish import build_site, sync_to_s3, write_digest
+from src.publish import build_site, invalidate_cloudfront, sync_to_s3, write_digest
 
 logger = logging.getLogger(__name__)
 
@@ -119,9 +119,10 @@ def main():
         logger.error("Site build failed, skipping S3 sync")
         return
 
-    # S3 sync
+    # S3 sync + CloudFront invalidation
     if not args.no_s3:
         sync_to_s3()
+        invalidate_cloudfront()
     else:
         logger.info("Skipping S3 sync (--no-s3)")
 
